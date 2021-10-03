@@ -1,0 +1,17 @@
+.form-group .text-danger {
+    opacity: 0;
+}
+
+.text-danger {
+    margin-left: 1rem;
+    transition: all 0.1s;
+    font-size: 12px;
+}
+
+.form-group:hover .text-danger {
+    opacity: 1;
+}
+
+label {
+    user-select: none;
+}

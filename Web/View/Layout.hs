@@ -42,17 +42,6 @@ stylesheets = [hsx|
 scripts :: Html
 scripts = [hsx|
         {when isDevelopment devScripts}
-        <script src={assetPath "/vendor/jquery-3.6.0.slim.min.js"}></script>
-        <script src={assetPath "/vendor/timeago.js"}></script>
-        <script src={assetPath "/vendor/popper.min.js"}></script>
-        <script src={assetPath "/vendor/bootstrap.min.js"}></script>
-        <script src={assetPath "/vendor/flatpickr.js"}></script>
-        <script src={assetPath "/vendor/morphdom-umd.min.js"}></script>
-        <script src={assetPath "/vendor/turbolinks.js"}></script>
-        <script src={assetPath "/vendor/turbolinksInstantClick.js"}></script>
-        <script src={assetPath "/vendor/turbolinksMorphdom.js"}></script>
-        <script src={assetPath "/helpers.js"}></script>
-        <script src={assetPath "/ihp-auto-refresh.js"}></script>
     |]
 
 devScripts :: Html
