@@ -17,9 +17,13 @@ $ ./start
 You also need to start the react bundler:
 
 ```bash
-$ cd frontend/
-$ npm install
-$ make # Will bundle app.jsx and save it to static/app.js
+$ make static/app.js -B ESBUILD_FLAGS="--watch" # Will bundle frontend/app.jsx and save it to static/app.js
 ```
 
 At first start sign up at `http://localhost:8000/NewUser`. Then login at `http://localhost:8000/NewSession`. After that you can access the todo manager.
+
+## IHP Cloud
+
+The demo app is deployed at https://wlulygxcdknebrolshgolktblgapwnxn.ihpapp.com/
+
+You can log in with `demo@digitallyinduced` and the password `demo`.
