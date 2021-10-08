@@ -8,6 +8,7 @@ class TodoList extends React.Component {
     }
 
     async componentDidMount() {
+        await ensureIsUser();
         await query('tasks')
             .orderBy('createdAt')
             .fetchAndRefresh(tasks => this.setState({ tasks }))
@@ -17,7 +18,9 @@ class TodoList extends React.Component {
         const { tasks } = this.state;
         
         if (tasks === null) {
-            return 'Loading tasks';
+            return <div class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>;
         }
 
         return <div>

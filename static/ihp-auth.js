@@ -44,3 +44,7 @@ function logout() {
     document.body.appendChild(form);
     form.submit();
 }
+
+async function ensureIsUser() {
+    await getCurrentUser();
+}
