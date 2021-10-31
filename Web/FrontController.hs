@@ -19,17 +19,22 @@ import IHP.DataSync.Controller
 import IHP.DataSync.REST.Types
 import IHP.DataSync.REST.Controller
 
+import qualified IHP.DataSync.Role as Role
+
 instance FrontController WebApplication where
     controllers = 
         [ startPage WelcomeAction
         
+        
+        , parseRoute @UserController
+
         -- DataSync
         , webSocketApp @DataSyncController
         , parseRoute @ApiController
         
         , parseRoute @SessionsController
         , parseRoute @UsersController
-        , parseRoute @UserController
+        
         -- Generator Marker
         ]
 
@@ -38,3 +43,4 @@ instance InitControllerContext WebApplication where
         setLayout defaultLayout
         initAutoRefresh
         initAuthentication @User
+        Role.ensureAuthenticatedRoleExists

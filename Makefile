@@ -24,4 +24,4 @@ include ${IHP}/Makefile.dist
 
 static/app.js:
 	cd frontend && npm install
-	./node_modules/.bin/esbuild app.jsx --bundle --outfile=../static/app.js ${ESBUILD_FLAGS}
+	cd frontend && ./node_modules/.bin/esbuild app.jsx --bundle --outfile=../static/app.js ${ESBUILD_FLAGS}
